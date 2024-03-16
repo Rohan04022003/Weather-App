@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="main">
+      <div id="header">
+        <div id="left">
+          <div id="todayTime"></div>
+        </div>
+        <div id="right">
+          <input type="text" placeholder="Search here..." />
+          <i class="ri-search-line" id="Search"></i>
+        </div>
+      </div>
+      <div id="middle">
+        <div id="middle1div">Delhi</div>
+        <div id="middle2div">
+          <div id="dayForecast">
+            <img src="./images/dayForcast.png" alt="" />
+          </div>
+          <div id="temperatureData">
+            <div id="temperature"></div>
+            <div id="dayInfo"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <div class="moreDetails">
+          <img src="./images/windSpeed.png" alt="" />
+          <p id="windSpeed"></p>
+        </div>
+        <div class="moreDetails">
+          <img src="./images/humidity.png" alt="" />
+          <p id="humidity"></p>
+        </div>
+        <div class="moreDetails">
+          <img src="./images/pressure.png" alt="" />
+          <p id="pressure">1015 mbar</p>
+        </div>
+        <div class="moreDetails">
+          <img src="./images/realFeelsTemperature.png" alt="" />
+          <p id="feelsTemperature">
+            <i class="ri-temp-cold-line"></i>25<sup>&#8451;</sup>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

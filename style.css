@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1561553873-e8491a564fd0?q=80&w=1894&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40rem;
+  height: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+#todayTime {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+#right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right input {
+  background-color: transparent;
+  border: 1px solid rgba(244, 244, 244, 0.416);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  height: 2rem;
+  padding: 0.4rem 0.7rem;
+  border-right: none;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+}
+
+#Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(244, 244, 244, 0.416);
+  font-size: 0.8rem;
+  height: 2rem;
+  padding: 0.43rem 0.6rem;
+  border-left: none;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  cursor: pointer;
+}
+
+#middle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70%;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+#middle1div {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+#middle2div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+#dayForecast {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 19rem;
+}
+
+#dayForecast img {
+  width: 50%;
+}
+
+#temperatureData {
+  width: 19rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#temperature {
+  font-size: 5rem;
+}
+
+#temperature > sup {
+  font-size: 2rem;
+}
+
+#dayInfo {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+#bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+#bottom .moreDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#bottom img {
+  width: 1.4rem;
+  filter: invert(100%);
+}
+
+#bottom #windSpeed,
+#humidity,
+#feelsTemperature,
+#pressure {
+  font-weight: 500;
+}
+
+@media (max-width: 676px) {
+  #main {
+    height: 100vh;
+  }
+
+  #header {
+    height: 15%;
+  }
+
+  #middle {
+    height: 55%;
+  }
+
+  #bottom {
+    height: 30%;
+  }
+
+  #todayTime {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  input {
+    width: 9rem;
+  }
+
+  #temperatureData {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #middle1div {
+    font-size: 3rem;
+  }
+
+  #middle2div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #dayForecast {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #dayForecast img {
+    width: 50%;
+    padding-top: 2rem;
+  }
+
+  #temperatureData {
+    width: 100%;
+    text-align: center;
+    gap: 0.6rem;
+  }
+
+  #temperature {
+    font-size: 20vw;
+  }
+
+  #dayInfo {
+    font-size: 11vw;
+  }
+}
